@@ -1,0 +1,129 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+*[class].btn {
+  display: inline-block;
+  margin: 0;
+  padding: 16px 24px;
+  font-weight: var(--fw-600);
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-dark);
+  text-align: center;
+  border-radius: var(--radius-btn);
+  background-color: var(--color-gray-300);
+  transition-property: background-color, color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+
+  &--reverse,
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-green-400);
+  }
+
+  &--reverse {
+    &:hover {
+      background-color: var(--color-gray-300);
+      color: var(--color-dark);
+    }
+  }
+
+  //&--arrow {
+  //  position: relative;
+  //  padding-right: 64px;
+  //
+  //  &::before {
+  //    @include cover-background();
+  //
+  //    content: '';
+  //    position: absolute;
+  //    top: 50%;
+  //    right: 8px;
+  //    transform: translateY(-50%);
+  //    width: 48px;
+  //    height: 48px;
+  //    background-image: var(--icon-arrow);
+  //  }
+  //}
+  //
+  //&--send {
+  //  max-width: fit-content;
+  //  background-color: var(--color-white);
+  //
+  //  &:hover {
+  //    background-color: var(--color-gray-600);
+  //    border-color: var(--color-gray-600);
+  //    color: var(--color-milk-100)
+  //  }
+  //}
+  //
+  //&--absolute {
+  //  position: absolute;
+  //  inset: 0;
+  //  padding: 0;
+  //  background-color: transparent;
+  //
+  //  &:hover {
+  //    background-color: transparent;
+  //  }
+  //
+  //  &::before {
+  //    @include cover-background();
+  //
+  //    content: '';
+  //    position: absolute;
+  //    bottom: 24px;
+  //    right: 24px;
+  //    width: 48px;
+  //    height: 48px;
+  //    transform: scale(1);
+  //    transition: transform 0.4s ease-in-out;
+  //
+  //    background-image: var(--icon-absolute);
+  //  }
+  //
+  //  &:hover::before {
+  //    transform: scale(1.2);
+  //  }
+  //}
+}
+
+//*[class].swiper {
+//  .swiper-button {
+//    width: 64px;
+//    height: 64px;
+//    background-color: var(--color-gray-700);
+//    border-radius: var(--radius-round);
+//    top: 50%;
+//    transform: translateY(-50%);
+//
+//    &::after {
+//      @include contain-background();
+//
+//      content: '';
+//      position: absolute;
+//      height: 20px;
+//      width: 26px;
+//      top: 50%;
+//      left: 50%;
+//      transform: translate(-50%, -50%);
+//      background-image: var(--icon-swiper);
+//    }
+//  }
+//
+//  .swiper-button-prev {
+//    &::after {
+//      transform: translate(-50%, -50%) rotate(180deg);
+//    }
+//  }
+//
+//  .swiper-button-disabled {
+//  }
+//
+//  .swiper-pagination {
+//  }
+//
+//  .swiper-pagination-bullet {
+//  }
+//}
