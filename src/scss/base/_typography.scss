@@ -28,6 +28,14 @@ h3 {
   font-size: clamp(24px, 2rem + 1vi, 32px);
 }
 
+h4 {
+  margin-bottom: 8px;
+  font-size: clamp(18px, 0.5rem + 1vi, 20px);
+  line-height: 1.5;
+  font-weight: var(--fw-600);
+  color: var(--color-dark);
+}
+
 .title {
   font-size: clamp(28px, 2rem + 1vi, 36px);
 }

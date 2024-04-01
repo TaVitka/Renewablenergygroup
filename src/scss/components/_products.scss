@@ -1,0 +1,50 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.products {
+  &__slides {
+    align-items: stretch;
+    min-height: 844px;
+    margin-bottom: 24px;
+  }
+
+  &__slide {
+    align-self: stretch;
+    padding: 24px 22px;
+    border: 2px solid var(--color-gray-550);
+    border-radius: var(--radius-main);
+
+    img {
+      max-width: 343px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: rem(25.6);
+    }
+
+    ul {
+      padding-left: rem(24);
+    }
+
+    li {
+      list-style: disc;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__content {
+    margin-bottom: 81px;
+  }
+}
