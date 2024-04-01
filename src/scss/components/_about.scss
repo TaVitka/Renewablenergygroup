@@ -1,0 +1,21 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.about {
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    max-width: 801px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &--mission {
+    padding: rem(127) 0 rem(156);
+  }
+}
