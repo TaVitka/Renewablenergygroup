@@ -43,6 +43,18 @@
       background-image: url("../images/icons/sales-icon.svg");
     }
 
+    &--energy::before {
+      background-image: url("../images/icons/energy-icon.svg");
+    }
+
+    &--environment::before {
+      background-image: url("../images/icons/heart-icon.svg");
+    }
+
+    &--cost::before {
+      background-image: url("../images/icons/check-icon.svg");
+    }
+
     h3 {
       text-align: center;
     }
@@ -54,5 +66,11 @@
 
   &__content {
     margin-bottom: rem(38.4);
+  }
+
+  &--benefits {
+    .services__content {
+      margin-bottom: 0;
+    }
   }
 }
