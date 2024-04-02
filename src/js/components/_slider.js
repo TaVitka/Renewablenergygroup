@@ -24,3 +24,26 @@ let options = {
 }
 
 const swiperProducts = new Swiper('.products__slider', options);
+
+
+const swiperServices = new Swiper('.about__slider', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  autoHeight: true,
+  speed: 700,
+  autoplay: {
+    delay: 200,
+  },
+  modules: [Navigation, Scrollbar, Pagination, EffectFade],
+  draggable: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination',
+  },
+});
