@@ -1,0 +1,33 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  padding: rem(64) 0 rem(19.2);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(mobile-l) {
+      flex-direction: column-reverse;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(19.2);
+    }
+  }
+
+  @include media(tablet) {
+    padding: 24px 0;
+  }
+}
