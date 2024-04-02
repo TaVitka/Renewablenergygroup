@@ -31,4 +31,11 @@
     width: 70%;
     margin: 0 auto rem(38.4);
   }
+
+  &--services {
+    .hero__inner {
+      background-position: center 0;
+      min-height: 700px;
+    }
+  }
 }
