@@ -1,0 +1,60 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.faq {
+
+  &__item {
+    overflow: hidden;
+    border: 2px solid var(--color-gray-550);
+    border-radius: var(--radius-main);
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  details {
+    overflow: hidden;
+
+    &[open] {
+      summary {
+        padding: 24px rem(86) 8px 24px;
+      }
+
+      summary::before {
+        rotate: 180deg;
+      }
+
+      summary + div {
+        padding: 0 24px 24px;
+      }
+    }
+  }
+
+  summary {
+    position: relative;
+    padding: 24px rem(86) 24px 24px;
+    font-size: clamp(24px, 2rem + 1vi, 32px);
+    line-height: 1.21;
+    font-weight: var(--fw-600);
+    color: var(--color-dark);
+    cursor: pointer;
+
+    &::before {
+      @include cover-background;
+
+      content: "";
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      overflow: hidden;
+      width: 32px;
+      height: 32px;
+      background-image: url("../images/icons/collapse-icon.svg");
+    }
+
+    + div {
+      padding: 0 24px;
+    }
+  }
+}
