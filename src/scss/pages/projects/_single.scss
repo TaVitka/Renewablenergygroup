@@ -1,0 +1,38 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.single {
+  h1 {
+    margin-bottom: 16px;
+    font-size: clamp(36px, 2.5rem + 1vi, 48px);
+  }
+
+  &__info {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 32px 24px;
+  }
+
+  &__img {
+    grid-column: span 2;
+    border-radius: var(--radius-main);
+  }
+
+  &__details {
+    padding: 24px;
+    border: 2px solid var(--color-gray-550);
+    border-radius: var(--radius-main);
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: clamp(24px, 2rem + 1vi, 32px);
+      text-align: left;
+    }
+  }
+}
