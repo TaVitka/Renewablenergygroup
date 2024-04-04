@@ -53,3 +53,14 @@
     }
   }
 }
+
+.page {
+  &--projects {
+    .projects__items {
+      margin-bottom: 0;
+    }
+    .projects__btn {
+      display: none;
+    }
+  }
+}
