@@ -48,20 +48,22 @@ window.addEventListener('DOMContentLoaded', function() {
   const swiperProducts = new Swiper('#products', options);
   const swiperPanels = new Swiper('#panels-slider', options);
   const swiperInverters = new Swiper('#inverters-slider', options);
+  const swiperBatteries = new Swiper('#batteries-slider', options);
 
   const filtersBtnAll = document.querySelectorAll('.swiper-filter[data-filter="all"]');
   const pannelFilters = document.querySelector('#panels-filters');
   const inverterFilters = document.querySelector('#inverters-filters');
+  const batterieFilters = document.querySelector('#batteries-filters');
 
   let filteringSlides = function(filters, slider) {
     let filterBtns = filters.querySelectorAll('.swiper-filter');
 
-    for (let btn of filterBtns) {
+    filterBtns.forEach(function(btn) {
       btn.addEventListener('click', function() {
         let filter = btn.getAttribute('data-filter');
         let filterBtnSiblings = btn.parentElement.querySelectorAll('.swiper-filter');
-        let swiperSlides = document.querySelectorAll('.products__slider .products__item');
-        let swiperSlidesFilter = document.querySelectorAll(`.products__slider .products__item.${filter}`);
+        let swiperSlides = slider.slides;
+        let swiperSlidesFilter = slider.el.querySelectorAll(`.products__slider .products__item.${filter}`);
 
         if (filter !== 'all') {
           swiperSlides.forEach(function(slide) {
@@ -80,7 +82,8 @@ window.addEventListener('DOMContentLoaded', function() {
         filterBtnSiblings.forEach(function(slide) {
           slide.classList.remove('active');
         });
-        this.classList.add('active');
+
+        btn.classList.add('active');
 
         slider.updateSize();
         slider.updateSlides();
@@ -88,9 +91,8 @@ window.addEventListener('DOMContentLoaded', function() {
         slider.updateSlidesClasses();
         slider.slideTo(0);
         slider.scrollbar.updateSize();
-        return false;
       });
-    }
+    });
   };
 
   filtersBtnAll.forEach(function(btn) {
@@ -99,4 +101,5 @@ window.addEventListener('DOMContentLoaded', function() {
 
   filteringSlides(pannelFilters, swiperPanels);
   filteringSlides(inverterFilters, swiperInverters);
+  filteringSlides(batterieFilters, swiperBatteries);
 });
