@@ -64,8 +64,58 @@
     }
   }
 
+  &__slides {
+    align-items: stretch;
+    min-height: 844px;
+    margin-bottom: 24px;
+  }
+
+  &__slide {
+    align-self: stretch;
+    min-height: inherit;
+    padding: 24px 22px;
+    border: 2px solid var(--color-gray-550);
+    border-radius: var(--radius-main);
+
+    img {
+      max-width: 343px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: rem(25.6);
+    }
+
+    ul {
+      padding-left: rem(24);
+    }
+
+    li {
+      list-style: disc;
+    }
+
+    .btn {
+      width: 100%;
+      align-self: flex-end;
+    }
+  }
+
+  &__article {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   &__content {
     margin-bottom: rem(38.4);
+  }
+
+  &--products {
+    .services__content {
+      margin-bottom: 16px;
+    }
   }
 
   &--benefits {

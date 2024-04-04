@@ -23,7 +23,7 @@ let options = {
   },
 }
 
-const swiperProducts = new Swiper('.products__slider', options);
+const swiperProducts = new Swiper('#products', options);
 
 
 const swiperServices = new Swiper('.about__slider', {
