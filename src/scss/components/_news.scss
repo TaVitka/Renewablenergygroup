@@ -121,4 +121,33 @@
       margin-bottom: 0;
     }
   }
+
+  &--single {
+    padding: rem(70.4) 0 rem(140.8);
+
+    .news__nav {
+      margin-bottom: 32px;
+    }
+
+    time, .author {
+      font-size: clamp(18px, 0.5rem + 1vi, 20px);
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: clamp(36px, 2.5rem + 1vi, 40px);
+    }
+
+    & > p {
+      margin-bottom: 30px;
+    }
+
+    & > img {
+      border-radius: var(--radius-main);
+
+      &:not(:last-of-type) {
+        margin-bottom: rem(74.8);
+      }
+    }
+  }
 }
