@@ -22,7 +22,7 @@
       }
 
       summary::before {
-        rotate: 180deg;
+        rotate: 0deg;
       }
 
       summary + div {
@@ -50,6 +50,7 @@
       overflow: hidden;
       width: 32px;
       height: 32px;
+      rotate: 180deg;
       background-image: url("../images/icons/collapse-icon.svg");
     }
 

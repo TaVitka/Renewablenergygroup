@@ -74,6 +74,16 @@
     &-details {
       display: none;
     }
+
+    &-details {
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        list-style: disc;
+      }
+    }
   }
 
   &__link {
