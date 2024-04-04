@@ -65,14 +65,12 @@
   }
 
   &__slides {
-    align-items: stretch;
     min-height: 844px;
     margin-bottom: 24px;
   }
 
   &__slide {
     align-self: stretch;
-    min-height: inherit;
     padding: 24px 22px;
     border: 2px solid var(--color-gray-550);
     border-radius: var(--radius-main);
