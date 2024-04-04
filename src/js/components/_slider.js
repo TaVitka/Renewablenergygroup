@@ -47,9 +47,11 @@ window.addEventListener('DOMContentLoaded', function() {
   });
   const swiperProducts = new Swiper('#products', options);
   const swiperPanels = new Swiper('#panels-slider', options);
+  const swiperInverters = new Swiper('#inverters-slider', options);
 
   const filtersBtnAll = document.querySelectorAll('.swiper-filter[data-filter="all"]');
   const pannelFilters = document.querySelector('#panels-filters');
+  const inverterFilters = document.querySelector('#inverters-filters');
 
   let filteringSlides = function(filters, slider) {
     let filterBtns = filters.querySelectorAll('.swiper-filter');
@@ -96,4 +98,5 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   filteringSlides(pannelFilters, swiperPanels);
+  filteringSlides(inverterFilters, swiperInverters);
 });
