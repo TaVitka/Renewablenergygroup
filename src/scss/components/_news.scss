@@ -180,6 +180,7 @@
 
     &__image {
       max-width: 100%;
+      border-radius: var(--radius-medium);
 
       &::before {
         width: 40px;

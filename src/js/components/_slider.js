@@ -1,6 +1,7 @@
 import Swiper, { Navigation, Pagination, EffectFade, Scrollbar } from 'swiper';
 
 window.addEventListener('DOMContentLoaded', function() {
+
   let options = {
     slidesPerView: 3,
     slidesPerGroup: 3,

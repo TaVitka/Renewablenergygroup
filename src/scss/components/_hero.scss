@@ -50,6 +50,14 @@
         background-position: 100% top;
       }
     }
+
+    &--services {
+      .hero__inner {
+        min-height: 400px;
+        padding: rem(88) 10px rem(44);
+        background-position: center 60%;
+      }
+    }
   }
 
   @include media(mobile-m) {

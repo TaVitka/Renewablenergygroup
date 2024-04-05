@@ -37,7 +37,7 @@ h3 {
   font-size: clamp(24px, 2rem + 1vi, 32px);
 
   @include media(tablet) {
-    font-size: clamp(24px, 1.5rem + 1vi, 28px);
+    font-size: clamp(24px, 1rem + 1vi, 28px);
   }
 }
 
@@ -55,6 +55,10 @@ h4 {
 
 .name {
   font-size: clamp(20px, 2rem + 1vi, 24px);
+
+  @include media(tablet) {
+    font-size: clamp(20px, 1rem + 1vi, 22px);
+  }
 }
 
 a,

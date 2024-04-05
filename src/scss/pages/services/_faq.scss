@@ -2,7 +2,6 @@
 @use "../../utils/mixins/"as*;
 
 .faq {
-
   &__item {
     overflow: hidden;
     border: 2px solid var(--color-gray-550);
@@ -56,6 +55,38 @@
 
     + div {
       padding: 0 24px;
+    }
+  }
+
+  @include media(tablet) {
+    &__item {
+      border-radius: var(--radius-medium);
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    summary {
+      padding: 16px rem(44) 16px 16px;
+      font-size: clamp(24px, 1rem + 1vi, 28px);
+
+      &::before {
+        top: 16px;
+        right: 16px;
+      }
+    }
+
+    details {
+      &[open] {
+        summary {
+          padding: 16px rem(44) 8px 16px;
+        }
+
+        summary + div {
+          padding: 0 16px 16px;
+        }
+      }
     }
   }
 }
