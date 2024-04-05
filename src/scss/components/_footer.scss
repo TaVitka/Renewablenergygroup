@@ -30,4 +30,18 @@
   @include media(tablet) {
     padding: 24px 0;
   }
+
+  @include media(mobile-m) {
+    padding: 16px 0;
+
+    &__inner {
+      gap: 30px;
+    }
+
+    &__item {
+      &:not(:last-of-type) {
+        margin-right: 16px;
+      }
+    }
+  }
 }

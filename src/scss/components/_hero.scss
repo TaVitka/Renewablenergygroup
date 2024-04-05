@@ -38,4 +38,25 @@
       min-height: 735px;
     }
   }
+
+  @include media(tablet) {
+    &__inner {
+      padding: rem(44) 10px;
+      min-height: 400px;
+    }
+
+    &--home {
+      .hero__inner {
+        background-position: 100% top;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    p {
+      width: 100%;
+      margin-bottom: 30px;
+      color: var(--color-gray-600);
+    }
+  }
 }

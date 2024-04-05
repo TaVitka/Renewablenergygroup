@@ -54,3 +54,20 @@ section {
 .main {
   padding-top: var(--header-height);
 }
+
+.overlay {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+  }
+
+  @include media(tablet) {
+    &::before {
+      background: var(--gradient-main);
+    }
+  }
+}
