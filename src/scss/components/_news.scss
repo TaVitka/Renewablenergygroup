@@ -205,7 +205,7 @@
     }
 
     h3 {
-      font-size: 22px;
+      font-size: clamp(20px, 1rem + 1vi, 22px);
     }
   }
 }

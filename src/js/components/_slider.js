@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', function() {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 24,
-    autoHeight: true,
     speed: 700,
     autoplay: {
       delay: 200,
@@ -24,6 +23,9 @@ window.addEventListener('DOMContentLoaded', function() {
       el: '.swiper-pagination',
     },
     breakpoints: {
+      993: {
+        autoHeight: true,
+      },
       992: {
         slidesPerView: 3,
         slidesPerGroup: 3,
@@ -37,14 +39,13 @@ window.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 16,
-      }
-    }
+      },
+    },
   };
 
   const swiperServices = new Swiper('.about__slider', {
     slidesPerView: 1,
     spaceBetween: 24,
-    autoHeight: true,
     speed: 700,
     autoplay: {
       delay: 200,
@@ -60,6 +61,11 @@ window.addEventListener('DOMContentLoaded', function() {
     pagination: {
       clickable: true,
       el: '.swiper-pagination',
+    },
+    breakpoints: {
+      993: {
+        autoHeight: true,
+      },
     },
   });
 

@@ -27,7 +27,7 @@ h2 {
   text-transform: capitalize;
 
   @include media(tablet) {
-    font-size: clamp(30px, 1.5rem + 1vi, 38px);
+    font-size: clamp(30px, 1.2rem + 1vi, 38px);
     margin-bottom: 24px;
   }
 }
@@ -51,6 +51,10 @@ h4 {
 
 .title {
   font-size: clamp(28px, 2rem + 1vi, 36px);
+
+  @include media(tablet) {
+    font-size: clamp(24px, 1rem + 1vi, 28px);
+  }
 }
 
 .name {

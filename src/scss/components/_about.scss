@@ -23,7 +23,6 @@
 
   &__slides {
     align-items: stretch;
-    min-height: 1018px;
   }
 
   &__slide {
@@ -44,7 +43,11 @@
     display: flex;
     align-items: flex-end;
     min-height: 722px;
-    padding: 24px;
+    padding: 24px 24px 35px;
+  }
+
+  &__intro {
+    margin-bottom: 24px;
   }
 
   &__img {
@@ -84,8 +87,8 @@
     }
 
     .swiper-button {
-      top: 50%;
-      transform: translateY(-50%);
+      top: 60%;
+      transform: translateY(-60%);
 
       &-prev {
         left: 24px;
@@ -107,7 +110,7 @@
   }
 
   &--services {
-    padding: rem(97) 0 rem(70.4);
+    padding: rem(70.4) 0 rem(70.4);
 
     h2 {
       margin-bottom: 20px;
@@ -120,29 +123,38 @@
     }
   }
 
+  @include media(tablet-wide) {
+    &__slider {
+      margin-bottom: 30px;
+      padding-bottom: 60px;
+    }
+
+    [class].swiper .swiper-button {
+      bottom: 0;
+      top: unset;
+      width: 40px;
+      height: 40px;
+      transform: translateY(0);
+    }
+
+    [class].swiper .swiper-pagination {
+      bottom: 6px;
+    }
+  }
+
   @include media(tablet) {
     &--mission,
     &--services {
       padding: rem(44) 0;
     }
 
-    &__slider {
-      margin-bottom: 30px;
-    }
-
-    &__slides {
-      min-height: max-content;
+    &__slide {
+      justify-content: flex-start;
+      height: auto;
     }
 
     &__inner {
       min-height: 500px;
-    }
-
-    &__intro {
-      margin-bottom: 30px;
-    }
-
-    &__inner {
       padding: 16px;
     }
 
@@ -156,7 +168,6 @@
   }
 
   @include media(mobile-l) {
-
     &__items {
       grid-template-columns: 1fr;
       grid-auto-rows: auto;
@@ -168,14 +179,6 @@
 
     &__inner {
       min-height: max-content;
-    }
-
-    [class].swiper .swiper-button {
-      bottom: 0;
-      top: unset;
-      width: 40px;
-      height: 40px;
-      transform: translateY(0);
     }
   }
 }
