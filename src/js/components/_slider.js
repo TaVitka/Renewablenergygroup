@@ -22,6 +22,22 @@ window.addEventListener('DOMContentLoaded', function() {
       clickable: true,
       el: '.swiper-pagination',
     },
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 24,
+      },
+      576: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 16,
+      }
+    }
   };
 
   const swiperServices = new Swiper('.about__slider', {
@@ -45,6 +61,7 @@ window.addEventListener('DOMContentLoaded', function() {
       el: '.swiper-pagination',
     },
   });
+
   const swiperProducts = new Swiper('#products', options);
   const swiperPanels = new Swiper('#panels-slider', options);
   const swiperInverters = new Swiper('#inverters-slider', options);

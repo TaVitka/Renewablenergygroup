@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 
     &--mirrored {
     flex-direction: row-reverse;
@@ -50,6 +51,51 @@
   &--services {
     .projects__items {
       margin-bottom: 0;
+    }
+  }
+
+  @include media(tablet-wide) {
+    img {
+      width: 45%;
+      height: auto;
+    }
+  }
+
+  @include media(tablet) {
+    &__item {
+      &:not(:last-of-type) {
+        margin-bottom: 66px;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__item {
+      flex-direction: column;
+
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+
+    img,
+    &__content {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    img {
+      border-radius: var(--radius-medium);
+      aspect-ratio: 5/3;
+    }
+
+    &__num,
+    .title {
+      margin-bottom: 8px;
     }
   }
 }
