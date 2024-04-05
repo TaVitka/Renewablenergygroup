@@ -37,4 +37,32 @@
       text-align: left;
     }
   }
+
+  @include media(tablet) {
+    h1 {
+      font-size: clamp(30px, 1.2rem + 1vi, 38px);
+    }
+
+    &__img,
+    &__details {
+      border-radius: var(--radius-medium);
+    }
+
+    h2 {
+      font-size: clamp(24px, 1rem + 1vi, 28px);
+    }
+  }
+
+  @include media(mobile-l) {
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    &__img {
+      grid-column: auto;
+      height: auto;
+      aspect-ratio: 4 / 3;
+    }
+  }
 }

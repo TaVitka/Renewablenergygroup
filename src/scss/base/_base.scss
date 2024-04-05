@@ -37,7 +37,7 @@ section {
   }
 
   @include media(mobile-m) {
-    padding: 0 0 rem(44);
+    padding: rem(20) 0;
   }
 }
 

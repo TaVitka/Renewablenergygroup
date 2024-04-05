@@ -79,12 +79,12 @@
   @include media(tablet) {
     &__wrapper {
       padding: 50px 16px 16px;
+      border-radius: var(--radius-medium);
     }
 
     &__content {
       margin-bottom: 16px;
       padding: 16px;
-      border-radius: var(--radius-medium);
     }
 
     &__close {
@@ -126,6 +126,5 @@
     p {
       font-size: 16px;
     }
-
   }
 }

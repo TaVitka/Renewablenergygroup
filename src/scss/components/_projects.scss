@@ -86,10 +86,10 @@
     &__content {
       max-width: 100%;
       width: 100%;
+      border-radius: var(--radius-medium);
     }
 
     img {
-      border-radius: var(--radius-medium);
       aspect-ratio: 5/3;
     }
 

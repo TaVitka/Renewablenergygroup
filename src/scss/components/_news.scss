@@ -170,6 +170,41 @@
     &__item {
       padding: 16px;
     }
+
+    &--all {
+      padding: rem(44) 0;
+
+      h1 {
+        font-size: clamp(30px, 1.2rem + 1vi, 38px);
+        margin-bottom: 30px;
+      }
+    }
+
+    &--single {
+      padding: 24px 0 rem(44);
+
+      .news__nav,
+      & > p {
+        margin-bottom: 16px;
+      }
+
+      time,
+      .author {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: clamp(30px, 1.2rem + 1vi, 38px);
+      }
+
+      & > img {
+        border-radius: var(--radius-medium);
+
+        &:not(:last-of-type) {
+          margin-bottom: 16px;
+        }
+      }
+    }
   }
 
   @include media(mobile-l) {
@@ -189,6 +224,11 @@
     }
 
     &__img {
+      height: auto;
+    }
+
+    &__picture {
+      aspect-ratio: 4 / 2;
       height: auto;
     }
   }

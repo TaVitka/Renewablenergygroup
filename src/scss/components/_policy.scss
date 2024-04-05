@@ -52,4 +52,28 @@
       border-bottom: 1px solid var(--color-green-400);
     }
   }
+
+  @include media(tablet) {
+    padding: 24px 0 rem(44);
+
+    h1 {
+      margin-bottom: 16px;
+      font-size: clamp(30px, 1.2rem + 1vi, 38px);
+    }
+
+    p,
+    ul,
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(20px, 1rem + 1vi, 22px);
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+  }
 }
