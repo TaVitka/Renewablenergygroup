@@ -24,6 +24,8 @@ window.addEventListener('DOMContentLoaded', function() {
     },
     breakpoints: {
       993: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
         autoHeight: true,
       },
       992: {
@@ -34,6 +36,7 @@ window.addEventListener('DOMContentLoaded', function() {
       576: {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        spaceBetween: 16,
       },
       1: {
         slidesPerView: 1,
